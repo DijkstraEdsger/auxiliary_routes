@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-side-nav-categories',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideNavCategoriesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe(params => {
+      if (params['id']) {
+        console.log('params', params['id']);
+      }
+      console.log('params', params['id']);
+    });
+  }
 
   ngOnInit(): void {
   }

@@ -1,11 +1,34 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainCoursesComponent } from './main-courses/main-courses.component';
+import { CourseCardsComponent } from './course-cards/course-cards.component';
+import { CoursesCategoryComponent } from './courses-category/courses-category.component';
+import { CoursesComponent } from './courses/courses.component';
+import { SideNavCategoriesComponent } from './side-nav-categories/side-nav-categories.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MainCoursesComponent
+    component: CoursesComponent,
+    children: [
+      {
+        path: '',
+        component: CourseCardsComponent
+      },
+      {
+        path: ':id',
+        component: CoursesCategoryComponent
+      },
+      {
+        path: '',
+        outlet: 'sidemenu',
+        component: SideNavCategoriesComponent
+      },
+      {
+        path: ':id',
+        outlet: 'sidemenu',
+        component: SideNavCategoriesComponent
+      }
+    ]
   }
 ];
 

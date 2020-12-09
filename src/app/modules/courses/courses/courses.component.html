@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <div
+        class="container"
+        style="background-color: #e9ecef; border-radius: 5px"
+      >
+        <app-breadcrumb-courses></app-breadcrumb-courses>
+      </div>
+      <div class="jumbotron jumbotron-fluid">
+        <div
+          class="container"
+          style="background-color: #e9ecef; padding: 30px; border-radius: 5px"
+        >
+          <h1 class="display-4">Course Categories!</h1>
+          <p class="lead">
+            This is a list of course categories, click on each to see a list of
+            courses for a given category
+          </p>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-sm-4">
+      <router-outlet name="sidemenu"></router-outlet>
+    </div>
+  </div>
+</div>
