@@ -1,4 +1,8 @@
-<div class="container" style="margin-top: 30px">
+<div *ngIf="isLoading" class="spinner-container">
+  <app-load-spinner class="center"></app-load-spinner>
+</div>
+
+<div *ngIf="!isLoading" class="container" style="margin-top: 30px">
   <div class="row">
     <div class="col-sm-4" *ngFor="let category of courseCategories">
       <div class="card">
@@ -8,7 +12,6 @@
           <a (click)="showCategory(category.id)" class="btn"
             >View details <i class="fa fa-angle-double-right"></i
           ></a>
-          >
         </div>
       </div>
     </div>

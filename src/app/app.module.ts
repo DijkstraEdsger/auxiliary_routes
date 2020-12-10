@@ -9,6 +9,7 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { CourseCardsComponent } from './components/course-cards/course-cards.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { CoursesCategoryComponent } from './components/courses-category/courses-category.component';
+import { LoadSpinnerComponent } from './components/common/load-spinner/load-spinner.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CoursesCategoryComponent } from './components/courses-category/courses-
     CoursesComponent,
     CourseCardsComponent,
     SideMenuComponent,
-    CoursesCategoryComponent
+    CoursesCategoryComponent,
+    LoadSpinnerComponent
   ],
   imports: [
     BrowserModule,
