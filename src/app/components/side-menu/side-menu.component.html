@@ -1,3 +1,6 @@
+<div *ngIf="isLoading" class="spinner-container">
+  <app-load-spinner-two class="center"></app-load-spinner-two>
+</div>
 <div class="list-group">
   <a
     *ngFor="let item of list"

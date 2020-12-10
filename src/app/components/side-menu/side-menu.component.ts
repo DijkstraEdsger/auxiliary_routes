@@ -9,6 +9,7 @@ import { CourseCategoryService } from 'src/app/services/course-category.service'
 })
 export class SideMenuComponent implements OnInit {
   list: any[] = [];
+  isLoading: boolean;
 
   constructor(
     private route: ActivatedRoute,
@@ -19,15 +20,19 @@ export class SideMenuComponent implements OnInit {
     this.route.params.subscribe((params) => {
       if (params['id']) {
         console.log('params', params['id']);
+        this.isLoading = true;
         this.courseCategoriesService
           .getSubCategoriesOfCourseCategory(params['id'])
           .subscribe((data) => {
+            this.isLoading = false;
             this.list = data;
           });
       } else {
+        this.isLoading = true;
         this.courseCategoriesService
           .getCoursesCategories()
           .subscribe((data) => {
+            this.isLoading = false;
             this.list = data;
           });
       }

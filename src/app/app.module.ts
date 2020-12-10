@@ -10,6 +10,7 @@ import { CourseCardsComponent } from './components/course-cards/course-cards.com
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { CoursesCategoryComponent } from './components/courses-category/courses-category.component';
 import { LoadSpinnerComponent } from './components/common/load-spinner/load-spinner.component';
+import { LoadSpinnerTwoComponent } from './components/common/load-spinner-two/load-spinner-two.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoadSpinnerComponent } from './components/common/load-spinner/load-spin
     CourseCardsComponent,
     SideMenuComponent,
     CoursesCategoryComponent,
-    LoadSpinnerComponent
+    LoadSpinnerComponent,
+    LoadSpinnerTwoComponent
   ],
   imports: [
     BrowserModule,
