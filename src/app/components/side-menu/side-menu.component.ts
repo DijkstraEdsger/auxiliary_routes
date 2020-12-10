@@ -2,18 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-side-nav-categories',
-  templateUrl: './side-nav-categories.component.html',
-  styleUrls: ['./side-nav-categories.component.scss']
+  selector: 'app-side-menu',
+  templateUrl: './side-menu.component.html',
+  styleUrls: ['./side-menu.component.scss']
 })
-export class SideNavCategoriesComponent implements OnInit {
+export class SideMenuComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
       if (params['id']) {
         console.log('params', params['id']);
       }
-      console.log('params', params['id']);
     });
   }
 

@@ -32,16 +32,15 @@ export class CourseCardsComponent implements OnInit {
 
   showCategory(id) {
     this.router.navigate(
-      // [
-      //   {
-      //     outlets:
-      //     {
-      //       primary: ["courses", id],
-      //       // sidemenu: ["courses", id]
-      //     }
-      //   }
-      // ]
-      [{ outlets: { primary: id, sidemenu: id } }],
+      [
+        {
+          outlets:
+          {
+            primary: [id],
+            sidemenu: [id]
+          }
+        }
+      ],
       { relativeTo: this.route }
     );
   }

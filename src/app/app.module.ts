@@ -5,12 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { BreadcrumbComponent } from './components/shared/breadcrumb/breadcrumb.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { CourseCardsComponent } from './components/course-cards/course-cards.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { CoursesCategoryComponent } from './components/courses-category/courses-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    CoursesComponent,
+    CourseCardsComponent,
+    SideMenuComponent,
+    CoursesCategoryComponent
   ],
   imports: [
     BrowserModule,
