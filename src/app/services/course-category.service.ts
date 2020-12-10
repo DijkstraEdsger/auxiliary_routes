@@ -85,4 +85,13 @@ export class CourseCategoryService {
     };
     return new Observable(f);
   }
+
+  getSubCategoriesOfCourseCategory(id): Observable<any> {
+    let f = (observer) => {
+      setTimeout(() => {
+        observer.next(this.courseCategories.find(item => item.id === id).subCategories);
+      }, 1000);
+    };
+    return new Observable(f);
+  }
 }
