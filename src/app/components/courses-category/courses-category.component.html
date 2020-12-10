@@ -1,1 +1,7 @@
-<p>courses-category works!</p>
+<div *ngIf="isLoading" class="spinner-container">
+  <app-load-spinner class="center"></app-load-spinner>
+</div>
+<div *ngIf="!isLoading">
+  <h1>{{ courseCategory.name }}</h1>
+  <p>{{ courseCategory.description }}</p>
+</div>

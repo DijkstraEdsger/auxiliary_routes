@@ -74,7 +74,15 @@ export class CourseCategoryService {
       }, 1000);
     };
 
-    let obs = new Observable(f);
-    return obs;
+    return new Observable(f);
+  }
+
+  getCourseCategory(id): Observable<any> {
+    let f = (observer) => {
+      setTimeout(() => {
+        observer.next(this.courseCategories.find(item => item.id === id));
+      }, 1000);
+    };
+    return new Observable(f);
   }
 }
